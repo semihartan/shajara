@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{9581B6D4-8F41-4B7D-BD41-A542105B7703}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeBuildCommandLine>cd ..&amp;&amp; build.bat build --arch=$(PlatformTarget) --config=$(Configuration)</NMakeBuildCommandLine>
+    <NMakeOutput>C:\Users\Administrator\source\repos\Native-Development\C-Workspace\System-Workspace\Win32\shajara\bin\Debug\x64\shajara.exe</NMakeOutput>
+    <NMakeCleanCommandLine>cd ..&amp;&amp; build.bat clean --arch=$(PlatformTarget) --config=$(Configuration)</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>cd ..&amp;&amp; build.bat rebuild --arch=$(PlatformTarget) --config=$(Configuration)</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>_UNICODE;UNICODE;WIN32_LEAN_AND_MEAN;_WIN32_WINNT=0x0A00;_CONSOLE;_DEBUG;DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>..\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <AdditionalOptions>/TC</AdditionalOptions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>build.bat build --arch=$(PlatformTarget) --config=$(Configuration)</NMakeBuildCommandLine>
+    <NMakeOutput>shajara.exe</NMakeOutput>
+    <NMakeCleanCommandLine>build.bat clean --arch=$(PlatformTarget) --config=$(Configuration)</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>build.bat rebuild --arch=$(PlatformTarget) --config=$(Configuration)</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>_UNICODE ;UNICODE ;WIN32_LEAN_AND_MEAN ;_WIN32_WINNT=0x0A00 ;_CONSOLE;WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>..\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>build.bat build --arch=$(PlatformTarget) --config=$(Configuration)</NMakeBuildCommandLine>
+    <NMakeOutput>shajara.exe</NMakeOutput>
+    <NMakeCleanCommandLine>build.bat clean --arch=$(PlatformTarget) --config=$(Configuration)</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>build.bat rebuild --arch=$(PlatformTarget) --config=$(Configuration)</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>_UNICODE ;UNICODE ;WIN32_LEAN_AND_MEAN ;_WIN32_WINNT=0x0A00 ;_CONSOLE;WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>..\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeBuildCommandLine>cd ..&amp;&amp; build.bat build --arch=$(PlatformTarget) --config=$(Configuration)</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>cd ..&amp;&amp; build.bat clean --arch=$(PlatformTarget) --config=$(Configuration)</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>cd ..&amp;&amp; build.bat rebuild --arch=$(PlatformTarget) --config=$(Configuration)</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>_UNICODE ;UNICODE ;WIN32_LEAN_AND_MEAN ;_WIN32_WINNT=0x0A00 ;_CONSOLE;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>..\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <AdditionalOptions>/TC</AdditionalOptions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\array.void.c" />
+    <ClCompile Include="..\src\ast.c" />
+    <ClCompile Include="..\src\lex.c" />
+    <ClCompile Include="..\src\main.c" />
+    <ClCompile Include="..\src\parse.c" />
+    <ClCompile Include="..\src\shjstr.c" />
+    <ClCompile Include="..\src\vector.c" />
+    <ClCompile Include="..\src\vector.void.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\build.bat" />
+    <None Include="..\dirs.mak" />
+    <None Include="..\LICENSE" />
+    <None Include="..\Makefile">
+      <FileType>Makefile</FileType>
+    </None>
+    <None Include="..\src\Makefile">
+      <FileType>Makefile</FileType>
+    </None>
+    <None Include="..\target.mak" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\array.h" />
+    <ClInclude Include="..\include\array.void.h" />
+    <ClInclude Include="..\include\defs.h" />
+    <ClInclude Include="..\include\shajara.h" />
+    <ClInclude Include="..\include\vector.h" />
+    <ClInclude Include="..\include\vector.void.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
