@@ -38,6 +38,15 @@
 #define DT			_T('.')
 #define AST			_T('*')
 #define PLUS		_T('+')
+#define HASH		_T('#')
+#define FSL			_T('/')
+#define BSL			_T('\\')
+#define COL			_T(':')
+#define EXC			_T('?')
+#define PIP			_T('|')
+#define LT			_T('<')
+#define GT			_T('>')
+#define QU			_T('\"')
 
 #define IS_VALID_FILE_CHAR(c)	((c) == DS || (c) == US || (c) == DT || (c) == AST || _istalnum((c)))
 
