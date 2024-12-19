@@ -150,7 +150,7 @@ Token_t Lex_NextToken()
 				}
 				else
 				{
-					if (CC == LF || CC == NULLC || CC == HASH || CC == FSL)
+					if (CC == TB || CC == LF || CC == NULLC || CC == HASH || CC == FSL)
 						break;
 				}
 				SHJ_HALT_IF(CC != SP && !IS_VALID_FILE_CHAR(CC),
