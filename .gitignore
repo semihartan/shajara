@@ -12,6 +12,7 @@ test*
 
 /vc/*
 /vc/STRUCTURE
+/src/STRUCTURE
 !/vc/*.sln
 !/vc/*.vcxproj
 !/vc/*.vcxproj.filters 
