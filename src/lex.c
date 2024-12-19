@@ -170,8 +170,12 @@ Token_t Lex_NextToken()
 			}
 			return NEW_TOKEN(SHJ_TK_ID, id);
 		}
-		else if (CP == s_source || PC == LF)
+		else if (CP == s_source || CC == LF)
 		{
+			while (CC == LF)
+		{
+				NC();
+			}
 			s_currentIndentation = NullIndentation();
 			while (CC == SP || CC == TB)
 			{
@@ -181,7 +185,6 @@ Token_t Lex_NextToken()
 			} 
 			if (IndentationSum(s_currentIndentation) > IndentationSum(s_previousIndentation))
 			{
-				
 				if (IndentationIsEmpty(s_firstIndentation))
 				{
 					s_firstIndentation = s_currentIndentation;
