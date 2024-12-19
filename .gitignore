@@ -10,9 +10,9 @@ res/soserrors.rc
 
 test*
 
-vc/.vs
-vc/*.user
-vc/debug
-vc/release
-vc/soscheme
+vc/*
+!vc/*.sln
+!vc/*.vcxproj
+!vc/*.vcxproj.filters 
+
 *.log
