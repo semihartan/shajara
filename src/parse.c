@@ -65,7 +65,8 @@ static ASTNode_t* _ParseBlock(ASTNode_t* _parent)
     while (true)
     {
         child = _ParseDirectory();
-        vector__push_back(_parent->children, child);
+        if(child)
+            vector__push_back(_parent->children, child);
         if (s_currentToken.kind == SHJ_TK_INDENT)
         {
             s_currentToken = Lex_NextToken();

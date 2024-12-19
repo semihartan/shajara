@@ -44,8 +44,8 @@ static bool IsFileName(const TCHAR* _filePath);
 static const TCHAR* GetErrnoMessage(int _Errno);
 int _tmain(int argc, const TCHAR* argv[])
 {
-    (void)--argc;
-    (void)++argv;
+    --argc;
+    ++argv;
     static TCHAR s_cwd[MAX_PATH];
     const TCHAR* structureSource = NULL;
     const TCHAR* fileName = DEFAULT_FILE;
@@ -68,6 +68,7 @@ int _tmain(int argc, const TCHAR* argv[])
     printf("CWD: %s.\n", s_cwd);
     printf("FileName: %s.\n", fileName);
 #endif // DEBUG
+    
 
 
     structureSource = ReadStructureFile(fileName);
@@ -157,6 +158,7 @@ static bool IsFileName(const TCHAR* _filePath)
 {
     return _tcsstr(_filePath, NT_FILE_SEP) == NULL;
 }
+
 const TCHAR* GetErrnoMessage(int _Errno)
 {
     return _tcserror_s(s_messageBuffer, MESSAGE_BUFFER_SZ + 1, _Errno) < 0 ? _T("_tcserror_s failed.") : s_messageBuffer;
