@@ -80,8 +80,7 @@ void ASTNode_print(ASTNode_t* _Self, int _Level)
 		return;
 	for (size_t i = 0; i < _Level; i++)
 	{
-		_puttc(_T(' '), stdout);
-		_puttc(_T(' '), stdout);
+		_fputts(_T("    "), stdout);
 	}
 	printf("+ %s\n", _Self->name);
 	for (size_t i = 0; i < _Self->children->count; i++)
