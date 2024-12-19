@@ -108,6 +108,7 @@
     <ClCompile Include="..\src\vector.void.c" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.gitignore" />
     <None Include="..\build.bat" />
     <None Include="..\dirs.mak" />
     <None Include="..\LICENSE" />

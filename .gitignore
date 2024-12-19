@@ -11,6 +11,7 @@ res/soserrors.rc
 test*
 
 vc/*
+vc/STRUCTURE
 !vc/*.sln
 !vc/*.vcxproj
 !vc/*.vcxproj.filters 

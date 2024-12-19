@@ -49,6 +49,7 @@
     <None Include="..\Makefile" />
     <None Include="..\target.mak" />
     <None Include="..\build.bat" />
+    <None Include="..\.gitignore" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\shajara.h">
