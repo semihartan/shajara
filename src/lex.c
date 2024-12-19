@@ -106,14 +106,6 @@ Token_t Lex_NextToken()
 				return PP = CP, NEW_TOKEN(SHJ_TK_DEDENT, NULL);
 			}
 		}
-		// If the current char is the beginning of file or line.
-		else if (CC == PLUS)
-			return PP = CP, NC(), NEW_TOKEN(SHJ_TK_PLUS, NULL);
-		else if (CC == LF)
-		{
-			PP = CP;
-			NC();
-		}		
 		else if (CC == _T('#') || CC == _T('/'))
 		{
 			if (CC == _T('/'))
@@ -127,6 +119,8 @@ Token_t Lex_NextToken()
 			while (CC != LF && CC != NULLC)
 				NC();
 		}
+		else if (CC == PLUS)
+			return PP = CP, NC(), NEW_TOKEN(SHJ_TK_PLUS, NULL);
 		else if (IS_VALID_FILE_CHAR(CC) || CC == _T('"') || CC == _T('\''))
 		{
 			bool hasStartQuote = false;
