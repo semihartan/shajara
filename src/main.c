@@ -76,7 +76,6 @@ int _tmain(int argc, const TCHAR* argv[])
     Lex_init(structureSource);
 
     ASTNode_t* tree = Parser_Parse();
-    ASTNode_print(tree, 0);
 
     Shajara_BuildDirs(tree, s_cwd);
      
