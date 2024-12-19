@@ -48,7 +48,19 @@
 #define GT			_T('>')
 #define QU			_T('\"')
 
-#define IS_VALID_FILE_CHAR(c)	((c) == DS || (c) == US || (c) == DT || (c) == AST || _istalnum((c)))
+#define IS_VALID_FILE_CHAR(c)	((\
+(c) != SP && \
+(c) != LF && \
+(c) != TB && \
+(c) != FSL && \
+(c) != BSL && \
+(c) != COL && \
+(c) != EXC && \
+(c) != PIP && \
+(c) !=  LT && \
+(c) !=  GT && \
+(c) !=  QU) || \
+_istalnum((c)))
 
 #define NEW_TOKEN(k, i)		(Token_t){ (TokenKind_t)k, i }
  
